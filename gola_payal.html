@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gola Payal</title>
+</head>
+<style>
+    /* <--------NAVIGATION SECTION-------> */
+
+        .nav_section ul{
+         
+         list-style-type: none;
+         height: 100%;
+         font-size: 16px;
+         display:flex;
+         margin: 0px;
+         padding: 0px;
+        background-color: white;
+        font-family: 'Raleway', sans-serif;
+         font-weight: bolder;
+         width: 100%;
+         text-decoration: none;
+         color: black;
+     }
+     .nav_section li{
+         margin-right: 20px;
+         text-decoration: none;
+         cursor: pointer;
+        
+     }
+     .nav_section{
+         background-color: white;
+         z-index: 3;
+         width:25%;
+         margin: 0px;
+         padding: 0px;
+         position: fixed;
+         top: 0px;
+         text-align: end;
+         cursor: pointer;
+         margin-left: 75%;
+     }
+     li a:hover{
+         color: white;
+         background-color: brown;
+     }
+     li a:link,a:visited{
+         color:black;
+         text-decoration: none;
+     }
+     
+
+     /*-----------------WELCOME SECTION-------------*/
+
+     .welcome_section{
+         display: flex;
+         width: 100%;
+         height: 100%;
+         margin: 40px;
+         justify-content: center;
+     }
+     .image_container{
+         width: 60%;
+        
+     }
+     .image_container img{
+         height: 100%;
+         width:100%; 
+         object-fit: contain;
+
+         
+     }
+     .text{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+           }
+    .text h1{
+        font-size: 35px;
+        margin:0px;
+        margin-left: 30px;
+        padding: 0px;
+    }
+    .text p{
+        margin: 0px;
+        padding: 0px;
+        margin-left: 100px;
+    }
+
+</style>
+<body>
+     <!--------NAVIGATION SECTION------->
+
+     <section class="nav_section">
+        <ul>
+            <li><a href="#NewDesigns">New Designs</a></li>
+            <li><a href="#collection">Collection</li></a>
+            <li><a href="#AboutMe">About Me</li></a>
+        </ul>
+    </section>
+
+    <!----------WELCOME SECTION---------->
+    <section class="welcome_section">
+        <div class="image_container">
+            <img src="images/Gola.jpg">
+        </div>
+        <div class="text">
+            <h1>Gola Payal</h1>
+            <p>Elegant in its own design</p>
+        </div>
+    </section>
+</body>
+</html>
