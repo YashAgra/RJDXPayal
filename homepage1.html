@@ -15,54 +15,14 @@
         overflow-x: hidden;
         
     }
-     /* <--------NAVIGATION SECTION-------> */
-
-        .nav_section ul{
-         justify-content: center;
-         list-style-type: none;
-         height: 100%;
-         font-size: 16px;
-         display:flex;
-         margin: 0px;
-         padding: 0px;
-        background-color: white;
-        font-family: 'Raleway', sans-serif;
-         font-weight: bolder;
-         width: 100%;
-         text-decoration: none;
-         color: black;
-     }
-     .nav_section li{
-         margin-right: 20px;
-         text-decoration: none;
-         cursor: pointer;
-        
-     }
-     .nav_section{
-         background-color: white;
-         z-index: 3;
-         width:25%;
-         margin: 0px;
-         padding: 0px;
-         position: fixed;
-         top: 0px;
-         text-align: end;
-         cursor: pointer;
-         margin-left: 75%;
-     }
-     li a:hover{
-         color: white;
-         background-color: brown;
-     }
-     li a:link,a:visited{
-         color:black;
-         text-decoration: none;
-     }
-
+    </style>
+    <link rel="stylesheet" href="navigation.css">
+    <style>
 /* ---------WELCOME SECTION----------  */
     .welcome_section{
         display: flex;
         top: 0px;
+        justify-content: center;
         
     }
     .image_container{
@@ -113,17 +73,25 @@
     }
    .newDesignGrid{
        display: grid;
-       grid-template-columns: 50% 50%;
+       justify-content: center;
+       grid-template-columns: 40% 40%;
    }
    .item{
        margin-left: 10px;
        margin-top:10px;
        margin-bottom: 0px;
        margin-right:10px;
+       transition: transform 0.4s;
    }
    .item img{
        position: relative;
        width: 100%;
+   }
+   .item:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.1);
+        z-index: 3;
    }
 /*----------------COLLECTIONS------------------*/
 
@@ -131,6 +99,7 @@
        display: flex;
        flex-direction: column;
        justify-content: center;
+       margin-bottom: 80px;
    }
    .row1{
        margin-top: 50px;
@@ -144,33 +113,46 @@
        justify-content: space-evenly;
    }
    .tile{
+       
        display: flex;
        flex-direction: column;
-       overflow: hidden;
+       background-color: silver;
        width: 20%;
        height: 180px;
-       font-size: 23px; 
        text-align: center;
-       color: silver;
+       color: black;
        border-radius: 10px 30px 10px 30px;
-       background-color: black;
-       font-family: 'Raleway', sans-serif;
-       font-weight: 800;
+       transition: transform 0.3s;
    }
+   
    .tile img{
-    overflow: hidden;
-    width: 100%;
+    border-top-left-radius:10px ;
+    border-top-right-radius:30px ;
     height: 100%;
-    object-fit: fill;
+    width: 100%;
+    object-fit:cover;
    }
-  
+
+   .tile:hover{
+       z-index: 3;
+       transform: scale(1.5);
+   }
+  .imgtext{
+      height: 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      font-size: 23px;
+  }
+  .tileimg{
+      height: 150px;
+  }
 </style>
 <body>
     <!--------NAVIGATION SECTION------->
 
     <section class="nav_section">
         <ul>
-            <li><a href="#NewDesigns">New Designs</a></li>
+            <li><a href="homepage1.html ">New Designs</a></li>
             <li><a href="#collection">Collection</li></a>
             <li><a href="#AboutMe">About Me</li></a>
         </ul>
@@ -194,10 +176,10 @@
             <p>NEW DESIGNS</p>
         </div>
         <div class="newDesignGrid">
-            <div class="item"><img src="images/img3.jpg"></div>
-            <div class="item"><img src="images/img3.jpg"></div>
-            <div class="item"><img src="images/img3.jpg"></div>
-            <div class="item"><img src="images/img3.jpg"></div>
+            <div class="item"><a href="#img"><img src="images/img3.jpg"></a></div>
+            <div class="item"><a href="#img"><img src="images/img3.jpg"></a></div>
+            <div class="item"><a href="#img"><img src="images/img3.jpg"></a></div>
+            <div class="item"><a href="#img"><img src="images/img3.jpg"></a></div>
         </div>
     </section>
     
@@ -207,13 +189,38 @@
             <p>COLLECTIONS</p>
         </div>
         <div class="row1">
-            <div class="tile"><img src="images/Gola.jpg">Gola Payal</div>
-            <div class="tile"><img src="images/italy.jpg">Itli Payal</div>
-            <div class="tile"><img src="images/Rajvada.jpg">Rajvada Payal</div>
+            <div class="tile">
+                <div class="tileimg">
+                    <a href="gola_payal.html"><img src="images/Gola.jpg"></a>
+                </div>
+                <div class="imgtext">Gola Payal</div>
+            </div>
+            <div class="tile">
+                <div class="tileimg">
+                    <a href="#"><img src="images/italy.jpg"></a>
+                </div>
+                <div class="imgtext">Itli Payal</div>
+            </div>
+            <div class="tile">
+                <div class="tileimg">
+                    <a href="#"><img src="images/Rajvada.jpg"></a>
+                </div>
+                <div class="imgtext">Rajvada Payal</div>
+            </div>
         </div>
         <div class="row2">
-            <div class="tile"><img src="images/sada_jhalar.jpg">Sada Jhalar</div>
-            <div class="tile"><img src="images/sada_payal.jpg">Sada Payal</div>
+            <div class="tile">
+                <div class="tileimg">
+                    <a href="#"><img src="images/sada_jhalar.jpg"></a>
+                </div>
+                <div class="imgtext">Sada Jhalar</div>
+            </div>
+            <div class="tile">
+                <div class="tileimg">
+                    <a href="#"><img src="images/sada_payal.jpg"></a>
+                </div>
+                <div class="imgtext">Sada Payal</div>
+            </div>
         </div>
     </section>
 </body>
