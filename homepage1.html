@@ -26,7 +26,7 @@
     
      <section class="welcome_section">
         <div class="text_box">
-            <div class="text_bg">Helllooo</div>
+            <div class="text_bg"></div>
             <div class="text">
             <p class="title">RJDX PAYAL</p>
             <p class="sub">Fancy and Deluxe Payal</p>
@@ -36,16 +36,19 @@
 
     <!-- ------NAVIGATION SECTION----->
 
-    <section class="nav_section" id="navId" style="height: 200px;">
+    <section class="nav_section" id="navId" style="height: 150px;">
         
         <div class="navbox"></div>
-        <div class="logo">
+        <ul class="first">
+            <li ><a href="homepage1.html">Payal</a></li>
+            <li class="first"><a href="#collection_section">Chains</a></li>
+        </ul>
+        <div class="logo" id="logo" style="width:80px; left:870px">
             <img src="images/logo.png">
         </div>
-        <ul>
-            <li><a href="homepage1.html">New Designs</a></li>
-            <li><a href="#collection_section">Collection</li></a>
-            <li><a href="#AboutMe">About Me</li></a>
+        <ul  class="second">
+            <li><a href="#AboutMe">Bracelet</a></li>
+            <li ><a href="#Belt">Belt</a></li>
         </ul>
     
     </section> 
@@ -109,11 +112,13 @@
     <script>
         window.onscroll=function(){scrollFunction()};
         function scrollFunction(){
-            if( document.getElementsByClassName("welcome_section").scrollTop>191 || document.getElementsByClassName("welcome_section").documentElement.scrollTop>191 ){
+            if( document.body.scrollTop>1060 || document.documentElement.scrollTop>1060 ){
                 document.getElementById("navId").style.height="100px";
+                document.getElementById("logo").style.left="0px";
             }
             else{
                 document.getElementById("navId").style.height="200px";
+                document.getElementById("logo").style.left="870px";
             }               
         }
     </script>
