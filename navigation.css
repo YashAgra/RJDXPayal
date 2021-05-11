@@ -22,26 +22,29 @@
     font-size: 32px;
     font-stretch: semi-expanded;
     transition: 0.5s;
+    margin-inline: 30px;
 }
 .nav_section{
-    z-index: 3;
+    z-index: 99;
     margin: 0px;
     padding: 0px;
     top: 0px;
     display: flex;
     position: -webkit-sticky;
     position: sticky;
-    justify-content: center;
+    width:100%;
+    background: rgba(232, 248, 253, 0.986);
     transition: 0.1s;
+    opacity: 0.9;
 }
-.navbox{
-    position: absolute;
+/* .navbox{
+    position: 
     background-color:rgba(232, 248, 253, 0.986);
     height: 100%;
     width: 100%;
     opacity: 95%;
     z-index: -2;
-}
+} */
 li a:hover{
     font-size: 40px;
 }
@@ -50,14 +53,10 @@ li a:link,a:visited{
     text-decoration: none;
 }
 .logo{
-    position: absolute;
-    width: fit-content;
-    left: 870px;   
+    width: 199px;
 }
 .logo img{
     height: 100%;
     position: initial;
 }
-.second{
-    margin-left: 100px;
-}
+

@@ -14,7 +14,6 @@
         margin: 0;
         padding: 0;
         overflow-x: hidden;
-        scroll-behavior: smooth;
     }
     </style>
     <link rel="stylesheet" href="navigation.css">
@@ -36,21 +35,21 @@
 
     <!-- ------NAVIGATION SECTION----->
 
-    <section class="nav_section" id="navId" style="height: 150px;">
+    <section class="nav_section" id="navId" style="height: 150px; justify-content: center;">
         
-        <div class="navbox"></div>
+        <!-- <div class="navbox"></div> -->
         <ul class="first">
             <li ><a href="homepage1.html">Payal</a></li>
             <li class="first"><a href="#collection_section">Chains</a></li>
         </ul>
-        <div class="logo" id="logo" style="width:80px; left:870px">
+        <div class="logo" id="logo" style="width:fit-content; left:870px">
             <img src="images/logo.png">
         </div>
+        <div class="second"></div>
         <ul  class="second">
             <li><a href="#AboutMe">Bracelet</a></li>
             <li ><a href="#Belt">Belt</a></li>
         </ul>
-    
     </section> 
    
 
@@ -112,13 +111,41 @@
     <script>
         window.onscroll=function(){scrollFunction()};
         function scrollFunction(){
-            if( document.body.scrollTop>1060 || document.documentElement.scrollTop>1060 ){
-                document.getElementById("navId").style.height="100px";
-                document.getElementById("logo").style.left="0px";
+            if( document.documentElement.scrollTop>1060 ){
+                document.getElementById("navId").style.height="100px";  
+                var scr=document.documentElement.scrollTop;
+                console.log(scr);
+                document.getElementById("navId").style.justifyContent="space-between";
+                document.getElementById("navId").innerHTML=`
+                
+        <div class="logo" id="logo" style="width:fit-content">
+            <img src="images/logo.png">
+        </div>
+        <ul>
+            <li ><a href="homepage1.html">Payal</a></li>
+            <li><a href="#collection_section">Chains</a></li>
+            <li><a href="#AboutMe">Bracelet</a></li>
+            <li ><a href="#Belt">Belt</a></li>  
+        </ul>
+                `;
             }
             else{
                 document.getElementById("navId").style.height="200px";
                 document.getElementById("logo").style.left="870px";
+                document.getElementById("navId").style.justifyContent="center";
+                document.getElementById("navId").innerHTML=`
+                
+        <ul class="first">
+            <li ><a href="homepage1.html">Payal</a></li>
+            <li ><a href="#collection_section">Chains</a></li>
+        </ul>
+        <div class="logo" id="logo" style="width:fit-content; left:870px">
+            <img src="images/logo.png">
+        </div>
+        <ul>
+            <li><a href="#AboutMe">Bracelet</a></li>
+            <li ><a href="#Belt">Belt</a></li>
+        </ul>`;
             }               
         }
     </script>
