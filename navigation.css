@@ -30,11 +30,10 @@
     padding: 0px;
     top: 0px;
     display: flex;
-    position: -webkit-sticky;
-    position: sticky;
     width:100%;
-    background: rgba(232, 248, 253, 0.986);
-    transition: 0.1s;
+    
+    transition: 0.3s;
+    position: fixed;
     opacity: 0.9;
 }
 /* .navbox{

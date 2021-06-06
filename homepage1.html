@@ -38,25 +38,14 @@
     <section class="nav_section" id="navId" style="height: 150px; justify-content: center;">
         
         <!-- <div class="navbox"></div> -->
-        <ul class="first">
-            <li ><a href="homepage1.html">Payal</a></li>
-            <li class="first"><a href="#collection_section">Chains</a></li>
-        </ul>
-        <div class="logo" id="logo" style="width:fit-content; left:870px">
-            <img src="images/logo.png">
-        </div>
-        <div class="second"></div>
-        <ul  class="second">
-            <li><a href="#AboutMe">Bracelet</a></li>
-            <li ><a href="#Belt">Belt</a></li>
-        </ul>
+       
     </section> 
    
 
    
 
     <!-------NEW DESIGNS SECTION-------->
-    <section class="newdesign_section">
+    <section class="newdesign_section" id="newdesign_section">
         <div class="page_title">
             <p>NEW DESIGNS</p>
         </div>
@@ -108,14 +97,44 @@
             </div>
         </div>
     </section>
+
+
+
     <script>
-        window.onscroll=function(){scrollFunction()};
+        window.onscroll=function(){scrollFunction(),showNavbar()};
+        function showNavbar(){
+            if(document.documentElement.scrollTop>200 && document.documentElement.scrollTop<997){
+                document.getElementById("navId").innerHTML=`
+                <ul class="first">
+            <li ><a href="homepage1.html">Payal</a></li>
+            <li class="first"><a href="#collection_section">Chains</a></li>
+        </ul>
+        <div class="logo" id="logo" style="width:fit-content; left:870px">
+            <img src="images/logo.png">
+        </div>
+        <div class="second"></div>
+        <ul  class="second">
+            <li><a href="#AboutMe">Bracelet</a></li>
+            <li ><a href="#Belt">Belt</a></li>
+        </ul>
+        `;
+                document.getElementById("navId").style.backgroundColor="rgba(232, 248, 253, 0.986)";
+                console.log("showNavbar"+document.documentElement.scrollTop);
+                document.getElementById("navId").style.height="200px";
+                document.getElementById("logo").style.left="870px";
+                document.getElementById("navId").style.justifyContent="center";
+                
+            
+            }
+            else if(document.documentElement.scrollTop<34){
+                document.getElementById("navId").innerHTML="";
+                document.getElementById("navId").style.backgroundColor="";
+            }
+        }
         function scrollFunction(){
-            if( document.documentElement.scrollTop>1060 ){
-                document.getElementById("navId").style.height="100px";  
-                var scr=document.documentElement.scrollTop;
-                console.log(scr);
-                document.getElementById("navId").style.justifyContent="space-between";
+            var scr=document.documentElement.scrollTop;
+
+            if(document.documentElement.scrollTop>997){
                 document.getElementById("navId").innerHTML=`
                 
         <div class="logo" id="logo" style="width:fit-content">
@@ -128,25 +147,12 @@
             <li ><a href="#Belt">Belt</a></li>  
         </ul>
                 `;
-            }
-            else{
-                document.getElementById("navId").style.height="200px";
-                document.getElementById("logo").style.left="870px";
-                document.getElementById("navId").style.justifyContent="center";
-                document.getElementById("navId").innerHTML=`
-                
-        <ul class="first">
-            <li ><a href="homepage1.html">Payal</a></li>
-            <li ><a href="#collection_section">Chains</a></li>
-        </ul>
-        <div class="logo" id="logo" style="width:fit-content; left:870px">
-            <img src="images/logo.png">
-        </div>
-        <ul>
-            <li><a href="#AboutMe">Bracelet</a></li>
-            <li ><a href="#Belt">Belt</a></li>
-        </ul>`;
-            }               
+                document.getElementById("navId").style.backgroundColor="rgba(232, 248, 253, 0.986)";
+                document.getElementById("navId").style.height="100px";  
+                console.log("scrollFunction if "+scr);   
+                document.getElementById("navId").style.justifyContent="space-between";
+                document.getElementById("logo").style.paddingLeft="50px";
+            }             
         }
     </script>
 </body>
